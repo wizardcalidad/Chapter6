@@ -8,13 +8,17 @@ public class ParkingChargesTest {
          myPackSpaceOne.getLastName();
 
         System.out.println("How many hours have you been packing?: ");
-        float hour = sc.nextInt();
+        double hour = sc.nextInt();
 
-        if ( hour == 3){
-            System.out.printf("%s %s , YOUr charge is %d%n",  myPackSpaceOne.getFirstName(), myPackSpaceOne.getLastName(), myPackSpaceOne.threehours);
+        if ( hour <= 3){
+            System.out.printf("%s %s , YOUr charge is %f%n",  myPackSpaceOne.getFirstName(), myPackSpaceOne.getLastName(), myPackSpaceOne.threehours);
         }
-        else if (hour > 3){
-            ParkingCharges.calculateCharges();
+        if (hour > 3 || hour <24){
+            System.out.println(myPackSpaceOne.calculateCharges());
+
+        }
+        if (hour == 24){
+            System.out.printf("%s %s , YOUr charge is %d%n",  myPackSpaceOne.getFirstName(), myPackSpaceOne.getLastName(), myPackSpaceOne.twentyFourHours);
         }
 
 

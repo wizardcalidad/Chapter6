@@ -1,9 +1,9 @@
 import java.util.Scanner;
 public class ParkingCharges {
-    private static float hour;
-    private double charge;
-    public static final float threehours = 2;
-    private static final float twentyFourHours = 10;
+   // public static double hour;
+    public double charge;
+    public static final double threehours = 2.0;
+    public static final double twentyFourHours = 10.0;
 
     private String firstName;
     private String lastName;
@@ -25,10 +25,13 @@ public class ParkingCharges {
         return lastName;
     }
 
-
     public static double calculateCharges(){
 
-        double charge = threehours + (0.5 * hour);
+        double threehours = 2.0;
+        double twentyFourHours = 10;
+        double hour =0;
+
+        double charge = threehours + 0.5 * hour;
 
 
         return charge;
